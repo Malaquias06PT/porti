@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos de Casal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #ffcccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: #333;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .photo {
+            margin: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .photo img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .photo:hover img {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #ffcccc;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" style="align-self: flex-start;">Voltar para a página inicial</a>
+    <h1>Até somos fofinhos diz la:)</h1>
+</header>
+
+<main>
+    <section class="gallery">
+        <div class="photo">
+            <img src="img/1D16F1A9-7698-49DC-8226-2805E7A74FF3.JPG" alt="Casal 1">
+        </div>
+        <div class="photo">
+            <img src="img/50BA0F07-3389-4802-8E22-637E76632618.JPG" alt="Casal 2">
+        </div>
+        <div class="photo">
+            <img src="img/52F602EA-9A67-4B5C-9463-9FCA4861F287.JPG" alt="Casal 3">
+        </div>
+        <div class="photo">
+            <img src="img/CDDA9A16-EC63-43F9-BC24-99DB51489278.JPG" alt="Casal 3">
+        </div>
+        <div class="photo">
+            <img src="img/FFDF3600-2C63-4587-B252-FD3B4A542C63.JPG" alt="Casal 3">
+        </div>
+        <!-- Adicione mais fotos conforme necessário -->
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Fotos de Casal</p>
+</footer>
+
+</body>
+</html>

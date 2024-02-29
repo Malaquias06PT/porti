@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #a9f9ff;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+            justify-items: center;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .description {
+            margin-top: 10px;
+        }
+        .description textarea {
+            width: 100%;
+            height: 80px;
+            resize: vertical;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            font-size: 14px;
+        }
+        .gallery div:nth-child(2n) {
+            margin-top: 30px;
+        }
+        .gallery div:nth-child(2n+1) {
+            margin-bottom: 30px;
+        }
+
+        .back-button a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minha Linda</h1>
+
+    <div class="gallery">
+        <div>
+            <img src="img/77EBCE5C-9EE5-43E0-86EF-0920F3FCB59C.jpeg" alt="Foto 1">
+            <div class="description">
+                <h2>Com um sorriso doce e olhar cativante,</h2>
+            </div>
+        </div>
+        <div>
+            <img src="img/image_123650291 (1).JPG" alt="Foto 2">
+            <div class="description">
+                <h2>Fofa e única, és meu encanto constante.</h2>
+            </div>
+        </div>
+        <div>
+            <img src="img/image_123650291 (2).JPG" alt="Foto 3">
+            <div class="description">
+                <h2>Teu amor me envolve como uma doce melodia,</h2>
+            </div>
+        </div>
+        <div>
+            <img src="img/image_123650291.JPG" alt="Foto 4">
+            <div class="description">
+                <h2>Amo-te mais a cada novo dia..</h2>
+            </div>
+        </div>
+    </div>
+    <div class="back-button">
+        <a href="index.html">Voltar para a página inicial</a>
+    </div>
+</body>
+</html>

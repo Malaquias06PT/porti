@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens de Amor Interativas</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #ff6666;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+
+        .gallery-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-right: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:last-child {
+            margin-right: 0;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            color: #333;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="index.html" style="align-self: flex-start;">Voltar para a página inicial</a>
+    <h1>Sitios que te vou levar um dia</h1>
+    <h4>(Vou levar a mais)</h4>
+</header>
+
+<div class="container">
+    <div class="card">
+
+        <div class="gallery-container">
+            <div class="gallery">
+                <img src="img/Italy.jpg" alt="Foto 1">
+                <img src="img/noruega.jpg" alt="Foto 2">
+                <img src="img/torreeiffel.jpg" alt="Foto 3">
+                <img src="img/grecia.jpg" alt="Foto 4">
+                <img src="img/toquio.jpg" alt="Foto 5">
+                <img src="img/la.jpg" alt="Foto 6">
+                <img src="img/ny.jpg" alt="Foto 6">
+                <!-- Adicione mais imagens conforme necessário -->
+            </div>
+            <button class="nav-btn prev-btn" onclick="prevSlide()">&#10094;</button>
+            <button class="nav-btn next-btn" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.gallery img');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.transform = `translateX(-${index * 100}%)`;
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    }
+</script>
+
+</body>
+</html>
